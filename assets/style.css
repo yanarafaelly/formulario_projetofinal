@@ -1,0 +1,329 @@
+:root {
+    --azul: #163e75;
+    --azul-escuro: #102c50;
+    --azul-claro: #00a3dc;
+    --amarelo: #ffb900;
+    --fundo: #071d5a;
+    --branco: #ffffff;
+    --texto: #0a0c16;
+} 
+
+/* config. geral */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Arial', sans-serif;
+}
+
+/* cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 180px;
+    padding: 35px 20px;
+    background: linear-gradient(
+        120deg,
+        var(--azul-escuro),
+        var(--azul),
+        var(--azul-claro)
+    );
+    color: var(--branco);
+    
+}
+
+/* titulo principal */
+.cabecalho {
+    background: linear-gradient(
+        120deg,
+        #102c50,
+        #163e75,
+        #008fc5
+    );
+    color: rgb(255, 217, 0);
+    padding: 2.5rem 1.5rem;
+    border-bottom: 5px solid var(--amarelo);
+}
+
+.cabecalho h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.cabecalho p {
+    font-size: 1.1rem;
+}
+
+.sobregalera {
+    background: rgb(55, 107, 175);
+    color: var(--texto);
+    border-left: 6px solid var(--amarelo);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px #163e7515;
+    line-height: 1.7;
+}
+
+/* seções do formu. */
+.secao {
+    background: rgb(161, 206, 248);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px #dae908;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.secao:hover {
+    box-shadow: 0 8px 25px #163e7520;
+}
+
+.secao .card-header {
+    background: linear-gradient(
+        100deg,
+        var(--azul),
+        var(--azul-claro)
+    );
+    color: rgb(255, 255, 255);
+    border: none;
+    border-bottom: 4px solid var(--amarelo);
+    border-radius: 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.secao .card-body {
+    padding: 1.5rem;
+}
+
+/* numeros das seções */
+.numero {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--amarelo);
+    color: var(--azul-escuro);
+    font-weight: 800;
+    margin-right: .65rem;
+}
+
+/* campos da seção */
+.form-label {
+    color: #000000;
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    min-height: 44px;
+    background-color: #6e9ae6;
+    border: 1px solid #f1f500;
+    border-radius: 8px;
+    padding: 10px 13px;
+    color: var(--azul-escuro);
+    transition: all .25s ease;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--azul-claro);
+    background-color: white;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: white;
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 0 3px #00a3dc25;
+    outline: none;
+}
+
+/* placeholder */
+.form-control::placeholder {
+    color: #615757;
+}
+
+/* campos obrig. */
+.obrigatorio {
+    color: #e5a000;
+    font-weight: bold;
+}
+
+/* transporte*/
+.transportegalera {
+    background: #eaf4fc;
+    color: var(--azul-escuro);
+    border-left: 5px solid var(--azul-claro);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+/* caixas de informação */
+details {
+    background: #f1f7fc;
+    border: 1px solid #eaf3dc;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 12px 0;
+    transition: .3s ease;
+}
+
+details[open] {
+    border-color: var(--azul-claro);
+    background: white;
+}
+
+summary {
+    color: var(--azul);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+details p {
+    color: #0068f0;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* botões */
+.btn-primary {
+    background: var(--azul-claro);
+    border: 2px solid var(--azul-claro);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--azul);
+    border-color: var(--azul);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #163e7530;
+}
+
+.btn-secondary {
+    border-radius: 30px;
+}
+
+/* checkbox e radio */
+.form-check-input {
+    border-color: #0055aa;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--azul-claro);
+    border-color: var(--azul-claro);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 3px #00a3dc25;
+}
+
+/* rodapé */
+footer {
+    background: var(--azul-escuro);
+    color: rgb(255, 255, 255);
+    font-size: .9rem;
+    padding: 25px 15px;
+    text-align: center;
+    border-top: 4px solid var(--amarelo);
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+
+    header {
+        min-height: 130px;
+        padding: 25px 15px;
+    }
+
+    .cabecalho {
+        padding: 2rem 1rem;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.7rem;
+    }
+
+    .secao .card-body {
+        padding: 1rem;
+    }
+
+    .secao .card-header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .sobregalera {
+        padding: 15px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+/* transpote recolhivel */
+
+.transporte-dropdown {
+    background: #8cc6f5;
+    border: 1px solid #2b00a1;
+    border-radius: 10px;
+    padding: 18px;
+    transition: .3s ease;
+}
+
+.transporte-dropdown summary {
+    color: var(--azul);
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Setinha */
+.transporte-dropdown summary::after {
+    content: "▼";
+    color: var(--azul-escuro);
+    transition: transform .3s ease;
+}
+
+/* Setinha quando aberto */
+.transporte-dropdown[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Quando abrir */
+.transporte-dropdown[open] {
+    background: rgb(17, 196, 250);
+    border-color: var(--azul-claro);
+}
+
+/* Caixa de informações */
+.transporte-dropdown .transportegalera {
+    background: #6dcaf8;
+    color: var(--azul-escuro);
+    border-left: 5px solid var(--azul-claro);
+    border-radius: 10px;
+    padding: 18px;
+}

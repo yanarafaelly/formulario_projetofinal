@@ -1,0 +1,34 @@
+GALERA TECH — PROJETO PHP + MYSQL (AMBIENTE LOCAL DE TESTES)
+
+1) Extraia a pasta galera-tech-backend-final em C:\xampp\htdocs\
+2) Inicie Apache e MySQL pelo Laragon.
+3) Acesse http://localhost/phpmyadmin e IMPORTE sql/galera_tech.sql em uma base NOVA.
+   ATENÇÃO: para evitar conflito, não importe por cima da estrutura antiga.
+4) Edite config.php: DB_HOST, DB_NAME, DB_USER, DB_PASS; ANO_INSCRICAO e SEMESTRE_INSCRICAO.
+db_host localhost
+db_name galera_tech.alunos
+db_user root
+db_pass 
+ano inscrição 2026
+semestre 1º
+5) Acesse http://localhost/galera-tech-backend-final/index.php
+6) Registre um aluno fictício e verifique o painel.
+7) Primeiro acesso administrador: http://localhost/galera-tech-backend-final/admin/criar_admin.php
+   Configure um email e senha fortes; esse instalador funciona somente se não existir outro admin.
+   EXCLUA o arquivo admin/criar_admin.php após a criação.
+8) Login: http://localhost/galera-tech-backend-final/admin/login.php
+
+FUNCIONALIDADES: formulário com validação navegador/servidor, CPF, WhatsApp,
+responsável condicional, registro de quatro confirmações, banco relacional,
+consultas por escola/série/cidade/ano/semestre e detalhamento.
+
+OBSERVAÇÕES:
+- NÃO utilizar CPF, RG, endereço ou outros dados reais durante testes.
+- Não publicar em servidor aberto sem revisão de segurança, privacidade,
+  autenticação, HTTPS, política de retenção e revisão do aviso de privacidade.
+- O aviso de privacidade é MINUTA e requer revisão institucional antes de uso real.
+- O formulário informa escola pública como requisito; essa condição não é
+  verificável automaticamente por uma escola digitada pelo estudante.
+- Para reabrir inscrição de CPF já existente em outro período, é necessária
+  rotina futura de atualização cadastral; este MVP bloqueia cadastro repetido.
+- Bootstrap requer acesso à internet para carregar via CDN.

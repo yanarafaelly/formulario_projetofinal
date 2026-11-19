@@ -1,0 +1,31 @@
+:root {
+    --azul: #163e75;
+    --fundo: #02047e;
+    --azul-claro: #3088e6;
+    --dourado: #aa9902;
+    --amarelo: #ffd900;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: #00286d;
+    font-family: Arial, sans-serif;
+}
+
+.cabecalhosucesso {
+ background: linear-gradient(110deg, #02047e, #aa9902);
+    color: var(--amarelo);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.secao {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px #00000020;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
